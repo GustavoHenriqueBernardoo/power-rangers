@@ -1,9 +1,6 @@
 {
    "power_rangers":[
       {
-         "summary":"The Mighty Morphin Power Rangers was an American television series that was adapted from Japan's long running 'Super Sentai' series, 'Kyuoryu Sentai Zyuranger.' It became a pop-culture phenomenon with over a dozen spin-off series and two feature films."
-      },
-      {
          "name":"Yellow Ranger (Trini Kwan)",
          "power_level":"Mid-Level, Street-Level",
          "role":"Heroic",
@@ -78,5 +75,6 @@
          ],
          "images":"images/green-ranger.jpg"
       }
-   ]
+   ],
+   "summary":"The Mighty Morphin Power Rangers was an American television series that was adapted from Japan's long running 'Super Sentai' series, 'Kyuoryu Sentai Zyuranger.' It became a pop-culture phenomenon with over a dozen spin-off series and two feature films."
 }
