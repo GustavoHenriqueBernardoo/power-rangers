@@ -1,5 +1,5 @@
 const getData = () => {
-  const endPoint = "./power-rangers.json";
+  const endPoint = "JSON/power-rangers.json";
   fetch(endPoint)
     .then(getResponse)
     .then(returnData)
