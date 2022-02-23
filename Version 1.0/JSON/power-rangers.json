@@ -1,0 +1,79 @@
+{
+   "power_rangers":[
+      {
+         "name":"Yellow Ranger (Trini Kwan)",
+         "power_level":"Mid-Level, Street-Level",
+         "role":"Heroic",
+         "abilities":"Well trained athlete and gymnast. She is also quite intelligent, and can often be found working alongside of Billy on one of his many inventions.",
+         "limitations":"The Uniform presumably exists invisibly and immaterially about her body. In order to cause the suit to manifest itself the Sabere-Tooth Tiger command must be used",
+         "weapons":[
+            "Blade Blaster",
+            "Power Daggers",
+            "Wrist Communicator"
+         ],
+         "images":"images/yellow-ranger.jpg"
+      },
+      {
+         "name":"Pink Ranger (Kimberly Hart)",
+         "power_level":"Mid-Level, Street-Level",
+         "role":"Heroic",
+         "abilities":"An Olympic caliber gymnast and acrobat who has become a good hand to hand combatant thanks to her training with the other Rangers (particularly Jason). She is also a flourishing musician and has a 'green thumb.'",
+         "limitations":"The Uniform presumably exists invisibly and immaterially about her body. In order to cause the suit to manifest itself the Pterodactyl command must be used",
+         "weapons":[
+            "Sidearm ",
+            "Blade Blaster"
+         ],
+         "images":"images/pink-ranger.jpg"
+      },
+      {
+         "name":"Blue Ranger (Billy Cranston)",
+         "power_level":"Mid-Level, Street-Level",
+         "role":"Heroic",
+         "abilities":"Billy has become a good hand to hand combatant and acrobat thanks to his training with the other Rangers. Also a skilled software developer, engineer, and inventor that is capable creating and/or repairing alien",
+         "limitations":"The Uniform presumably exists invisibly and immaterially about her body. In order to cause the suit to manifest itself the Triceratops command must be used",
+         "weapons":[
+            "Blade Blaster",
+            "Power Daggers",
+            "Wrist Communicator"
+         ],
+         "images":"images/blue-ranger.jpg"
+      },
+      {
+         "name":"Black Ranger (Zack Taylor)",
+         "power_level":"Mid-Level, Street-Level",
+         "role":"Heroic",
+         "abilities":"Highly athletic, and is able to perform various gymnastic feats and dance with great grace and style. Also a superb martial artist and has even created his own martial arts style; 'Hip-Hop-Kido'",
+         "limitations":"The Uniform presumably exists invisibly and immaterially about her body. In order to cause the suit to manifest itself the Mastodon command must be used",
+         "weapons":[
+            "Blade blaster",
+            "Power Daggers",
+            "Power Axe"
+         ],
+         "images":"images/black-ranger.jpg"
+      },
+      {
+         "name":"Red Ranger (Jason Lee Scott)",
+         "power_level":"Mid-Level, Street-Level",
+         "role":"Heroic",
+         "abilities":"A brilliant karateka (practitioner of the martial art karate). Of all the rangers, only Tommy is his equal in melee combat.",
+         "limitations":"The Uniform presumably exists invisibly and immaterially about her body. In order to cause the suit to manifest itself the Tyrannosaurus command must be used",
+         "weapons":[
+            "Blade blaster",
+            "Power Daggers",
+            "Power Sword"
+         ],
+         "images":"images/red-ranger.jpg"
+      },
+      {
+         "name":"Green Ranger (Tommy Oliver)",
+         "power_level":"Mid-Level, Street-Level",
+         "role":"Heroic",
+         "abilities":"A gifted hand to hand combatant and all around athlete. Also holds a 3rd degree black belt in Karate.",
+         "limitations":"The Uniform presumably exists invisibly and immaterially about her body. In order to cause the suit to manifest itself the Dragonzord command must be used",
+         "weapons":[
+            "Dragon Dagger"
+         ],
+         "images":"images/green-ranger.jpg"
+      }
+   ]
+}
