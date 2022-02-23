@@ -30,3 +30,26 @@ const getYear = () => {
 
 getData();
 getYear();
+
+// Variables UI
+// const btnRed = document.querySelector('pwrRed');
+// const btnBlue = document.querySelector('pwrBlue');
+// const btnBlack = document.querySelector('pwrBlack');
+// const btnYellow = document.querySelector('pwrYellow');
+// const btnPink = document.querySelector('pwrPink');
+// const btnWhite = document.querySelector('pwrWhite');
+const panels = document.querySelectorAll('.panel');
+
+panels.forEach((panel) => {
+  panel.addEventListener('click', (()=> {
+    removeActiveClasses();
+    panel.classList.add('active');
+  }))
+})
+
+function removeActiveClasses(){
+  panels.forEach((panel)=>{
+    panel.classList.remove('active');
+  })
+}
+console.log(panels);
