@@ -3,7 +3,7 @@ const getData = () => {
   fetch(endPoint)
     .then(getResponse)
     .then(returnData)
-    .then(catchError)
+    .catch(catchError)
 }
 
 const getResponse = (response) => {
