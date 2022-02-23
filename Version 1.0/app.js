@@ -23,4 +23,10 @@ const catchError = (error) => {
   throw new Error(`Oh no: ${error}`)
 }
 
-getData()
+// get year for copyright 
+const getYear = () => {
+  return document.querySelector("footer").innerHTML = `<div> Copyright ${new Date().getFullYear()} </div>`;
+}
+
+getData();
+getYear();
