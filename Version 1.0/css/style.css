@@ -5,6 +5,7 @@
 }
 
 body {
+  background-color: antiquewhite;
   font-family: "Akaya Telivigala", cursive;
   display: flex;
   flex-direction: column;
@@ -24,11 +25,11 @@ body {
 
 .panel {
   color: white;
-  height: 80vh;
+  height: 90vh;
   cursor: pointer;
   flex: 1;
   position: relative;
-  transition: flex 0.4s ease-in;
+  transition: flex 0.5s ease-in;
 }
 
 .panel h3 {
@@ -43,16 +44,14 @@ body {
 .panel.active {
   flex: 5;
 }
-.panel.active background-image {
-  opacity: 0;
-}
+
 
 .panel.active h3 {
   opacity: 1;
   transition: opacity 0.6s ease-in 0.4s;
 }
 .panel.active img{
-  opacity: 0;
+  opacity: 15%;
   transition: all 200ms ease-in;
 }
 
@@ -97,5 +96,5 @@ img {
   background-color: rgb(232, 0, 240);
 }
 .panel.pwrWhite {
-  background-color: rgb(139, 139, 139);
+  background-color: rgb(214, 214, 214);
 } 
