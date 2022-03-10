@@ -11,7 +11,7 @@
             "Power Daggers",
             "Wrist Communicator"
          ],
-         "images":"images/yellow-ranger.jpg"
+         "images":"images/pwrYellow.jpg"
       },
       {
          "name":"Pink Ranger (Kimberly Hart)",
@@ -23,7 +23,7 @@
             "Sidearm ",
             "Blade Blaster"
          ],
-         "images":"images/pink-ranger.jpg"
+         "images":"images/pwrPink.jpg"
       },
       {
          "name":"Blue Ranger (Billy Cranston)",
@@ -36,7 +36,7 @@
             "Power Daggers",
             "Wrist Communicator"
          ],
-         "images":"images/blue-ranger.jpg"
+         "images":"images/pwrBlue.jpg"
       },
       {
          "name":"Black Ranger (Zack Taylor)",
@@ -49,7 +49,7 @@
             "Power Daggers",
             "Power Axe"
          ],
-         "images":"images/black-ranger.jpg"
+         "images":"images/pwrBlack.jpg"
       },
       {
          "name":"Red Ranger (Jason Lee Scott)",
@@ -62,7 +62,7 @@
             "Power Daggers",
             "Power Sword"
          ],
-         "images":"images/red-ranger.jpg"
+         "images":"images/pwrRed.jpg"
       },
       {
          "name":"Green Ranger (Tommy Oliver)",
@@ -73,7 +73,7 @@
          "weapons":[
             "Dragon Dagger"
          ],
-         "images":"images/green-ranger.jpg"
+         "images":"images/pwrWhite2.jpg"
       }
    ],
    "summary":"The Mighty Morphin Power Rangers was an American television series that was adapted from Japan's long running 'Super Sentai' series, 'Kyuoryu Sentai Zyuranger.' It became a pop-culture phenomenon with over a dozen spin-off series and two feature films."

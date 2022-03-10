@@ -1,36 +1,42 @@
-// const panels = document.querySelectorAll('.panel');
-// const eachRanger = document.querySelector('.each-ranger');
+const panels = document.querySelectorAll('.panel');
+const modalContainer = document.querySelector('.modal-container')
+const modalHeader = document.querySelector('.modal-header')
+const modalBody = document.querySelector('.modal-body')
+const closeBtn = document.querySelector('.closeBtn')
 
+const API = 'JSON/power-rangers.json';
+
+//Get PowerRangers info
+getPowerRangers(API);
 
 // Fetching the JSON file
-const getData = () => {
-  const endPoint = "JSON/power-rangers.json";
-  fetch(endPoint)
-    .then(getResponse)
-    .then(returnData)
-    .catch(catchError)
+async function getPowerRangers(url){
+  const response = await fetch(url);
+  const data = await response.json();
+  console.log(data);
+  returnData(data);
 }
-
-const getResponse = (response) => {
-  if (!response.ok) {
-    throw new Error(`Network response not valid returned: ${response}`);
-  }
-  else {
-    return response.json();
-  }
-}
-
 const returnData = (payload) => {
   handleClick(payload);
-}
-
-const catchError = (error) => {
-  throw new Error(`Oh no: ${error}`)
 }
 
 // get year for copyright 
 const getYear = () => {
   return document.querySelector("footer").innerHTML = `<div> Copyright ${new Date().getFullYear()} </div>`;
+}
+
+panels.forEach(panel => {
+  panel.addEventListener('click', openModal)
+})
+
+closeBtn.addEventListener('click', closeModal)
+
+function openModal(){
+  modalContainer.classList.remove('hidden')
+}
+
+function closeModal(){
+  modalContainer.classList.add('hidden')
 }
 
 // Creating a click eventListener to add class active and show content from JSON
@@ -40,6 +46,7 @@ function handleClick(data) {
     panel.addEventListener('click', ((event)=> {
       removeActiveClasses();
       panel.classList.add('active');
+      console.log(event.currentTarget)
       if(event.currentTarget.classList.contains("active")) {
         showJson(data,event.currentTarget);
       } 
@@ -57,21 +64,25 @@ function removeActiveClasses(){
 
 // Get the content from JSON to the HTML
 function showJson(data,target) {
+  target.innerHTML = '';
   data.power_rangers.forEach((ranger) => {
+    const {name, images, power_level, role, abilities, limitations} = ranger;
     if(ranger.name.includes(target.id)) {
-      target.innerHTML = `
+      modalHeader.innerHTML += `
         <div class="each-ranger"> 
-          <p> ${ranger.name} </p>
-          <img src="${ranger.images}">
-          <p> ${ranger.power_level} </p>
-          <p> ${ranger.role} </p>
-          <p> ${ranger.abilities} </p>
-          <p> ${ranger.limitations} </p>
-          <div> ${ranger.abilities} </div>
+        <p>Name: ${name}</p>`
+      modalBody.innerHTML = `
+        <div class="each-ranger"> 
+          <img src="${images}">
+          <p>Power Level: ${power_level} </p>
+          <p>Role: ${role} </p>
+          <p>Abilities: ${abilities} </p>
+          <p>Limitations: ${limitations} </p>
         </div>
       `
       target.style.pointerEvents = "none";
       target.style.height = "auto";
+      
       // const redRanger = document.querySelector('pwrRed');
     // target.style.pointerEvents = 'none';
     // target.style.height = 'auto';
@@ -86,6 +97,4 @@ function showJson(data,target) {
     }
   })
 }
-
-getData();
 getYear();
