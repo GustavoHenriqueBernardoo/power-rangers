@@ -4,6 +4,9 @@ const modalHeader = document.querySelector('.modal-header')
 const modalBody = document.querySelector('.modal-body')
 const closeBtn = document.querySelector('.closeBtn')
 
+const modalTitle = document.createElement('div');
+
+
 const API = 'JSON/power-rangers.json';
 
 //Get PowerRangers info
@@ -62,15 +65,24 @@ function removeActiveClasses(){
   })
 }
 
+// Clear the html
+function clearRangers(){
+  target.innerHTML = '';
+  modalHeader.innerText = '';
+  modalTitle.innerText = '';
+
+}
+
 // Get the content from JSON to the HTML
 function showJson(data,target) {
-  target.innerHTML = '';
   data.power_rangers.forEach((ranger) => {
     const {name, images, power_level, role, abilities, limitations} = ranger;
     if(ranger.name.includes(target.id)) {
-      modalHeader.innerHTML += `
-        <div class="each-ranger"> 
-        <p>Name: ${name}</p>`
+      modalTitle.classList.add('each-ranger-title');
+      modalTitle.innerHTML = `<p>Name: ${name}</p>`  
+      modalHeader.appendChild(modalTitle) 
+
+
       modalBody.innerHTML = `
         <div class="each-ranger"> 
           <img src="${images}">
@@ -82,6 +94,8 @@ function showJson(data,target) {
       `
       target.style.pointerEvents = "none";
       target.style.height = "auto";
+      
+      setTimeout(clearRangers, 100)
       
       // const redRanger = document.querySelector('pwrRed');
     // target.style.pointerEvents = 'none';

@@ -80,6 +80,14 @@ img {
   padding: 10%;
 }
 
+.each-ranger-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  text-align: center;
+}
+
 .each-ranger img {
   width: 5rem;
   height: 5rem;
@@ -145,19 +153,23 @@ img {
 .modal {
   height: 100%;
   width: 100%;
-  background-color: antiquewhite;
+  background-color: rgba(255, 254, 254, 0.705);
   border: 2px solid black;
 }
 
 .modal-header {
-  background-color: lightblue;
+  background-color: rgba(0, 0, 0, 0.322);
+  height: auto;
+  width: auto;
 }
 
 .closeBtn{
   font-size: 3rem;
   display: flex;
-  justify-content: flex-end;
   cursor: pointer;
+  width: 40px;
+  height: auto;
+  margin-left: auto;
 }
 
 .closeBtn:hover{
