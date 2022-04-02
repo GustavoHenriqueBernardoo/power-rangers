@@ -81,7 +81,11 @@ function showJson(data, target) {
       modalTitle.classList.add('each-ranger-title');
       modalTitle.innerHTML = `<p>Name: ${name}</p>`
       modalHeader.insertAdjacentElement("afterbegin", modalTitle)
-
+      // if (ranger.name === 'Red Ranger (Jason Lee Scott)') {
+      //   modalTitle.style.color = 'red'
+      //   modalBody.style.background = 'url(https://kanto.legiaodosherois.com.br/w750-h750-k1/wp-content/uploads/2015/06/49e5fc5ddeec05e9017939a675186e6c.jpg.jpeg) no-repeat center'
+      //   modalBody.style.color = 'black'
+      // }
 
       modalBody.innerHTML = `
         <div class="each-ranger"> 
@@ -109,5 +113,6 @@ function showJson(data, target) {
       // eachRanger.style.background.opacity = '15%';
     }
   })
+
 }
 getYear();
