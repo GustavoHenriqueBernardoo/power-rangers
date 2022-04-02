@@ -81,7 +81,8 @@ img {
 }
 
 .each-ranger-title {
-  text-align: center;
+  /* text-align: center; */
+  margin-inline: auto;
 }
 
 .each-ranger img {
@@ -123,7 +124,6 @@ img {
 /* MODAL  */
 
 .modal-container {
-  /* opacity: 0; */
   position: absolute;
   display: flex;
   justify-content: center;
@@ -135,7 +135,7 @@ img {
   color: rgb(17, 0, 255);
   border: 2px black solid;
   border-radius: 5px;
-  /* overflow: hidden; */
+  overflow: hidden;
   z-index: 1;
 }
 .modal-container.hidden {
@@ -150,24 +150,43 @@ img {
   width: 100%;
   background-color: rgba(255, 254, 254, 0.705);
   border: 2px solid black;
+  overflow-y: auto;
 }
 
 .modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* flex-direction: column; */
   background-color: rgba(0, 0, 0, 0.322);
   height: 5rem;
   width: 100%;
+  font-size: 1.4em;
 }
 
 .closeBtn {
   font-size: 3rem;
-  display: flex;
-  cursor: pointer;
   width: 40px;
   height: 40px;
-  margin-left: auto;
+  align-self: start;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  /* margin: 0; 
+  margin-left: 50px*/
 }
 
 .closeBtn:hover {
+  color: #000;
+}
+
+.modal-body {
+  display: flex;
+  font-size: 20px;
+  line-height: 25px;
+}
+.modal-body:first-child {
   color: #000;
 }
 

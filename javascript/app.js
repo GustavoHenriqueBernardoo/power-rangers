@@ -80,7 +80,7 @@ function showJson(data, target) {
     if (ranger.name.includes(target.id)) {
       modalTitle.classList.add('each-ranger-title');
       modalTitle.innerHTML = `<p>Name: ${name}</p>`
-      modalHeader.appendChild(modalTitle)
+      modalHeader.insertAdjacentElement("afterbegin", modalTitle)
 
 
       modalBody.innerHTML = `
