@@ -1,11 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Bebas+Neue&display=swap%22");
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Bebas+Neue&display=swap%22');
 
 * {
   box-sizing: border-box;
 }
 
 body {
-  font-family: "Akaya Telivigala", cursive;
+  font-family: 'Akaya Telivigala', cursive;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -75,16 +75,12 @@ img {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  flex: 1;
-  flex-basis: 95vw;
-  padding: 10%;
+  /* flex: 1;
+  flex-basis: 95vw; */
+  padding: 1rem;
 }
 
 .each-ranger-title {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0;
   text-align: center;
 }
 
@@ -103,7 +99,7 @@ img {
   justify-content: center;
   margin-top: auto;
   padding: 30px;
-  width:100%;
+  width: 100%;
 }
 .panel.pwrRed {
   background-color: rgb(235, 0, 0);
@@ -121,33 +117,32 @@ img {
   background-color: rgb(232, 0, 240);
 }
 .panel.pwrGreen {
-  background-color: 	rgb(34,139,34);
-} 
+  background-color: rgb(34, 139, 34);
+}
 
 /* MODAL  */
 
-.modal-container{
+.modal-container {
   /* opacity: 0; */
   position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 10rem;
+  margin-top: 5rem;
   height: 70%;
   width: 70%;
   background-color: rgba(255, 244, 244, 0.842);
   color: rgb(17, 0, 255);
   border: 2px black solid;
   border-radius: 5px;
-  overflow: hidden;
+  /* overflow: hidden; */
   z-index: 1;
 }
 .modal-container.hidden {
   opacity: 0;
   z-index: -1;
-
 }
-.modal-container h1{
+.modal-container h1 {
   text-align: center;
 }
 .modal {
@@ -159,20 +154,20 @@ img {
 
 .modal-header {
   background-color: rgba(0, 0, 0, 0.322);
-  height: auto;
-  width: auto;
+  height: 5rem;
+  width: 100%;
 }
 
-.closeBtn{
+.closeBtn {
   font-size: 3rem;
   display: flex;
   cursor: pointer;
   width: 40px;
-  height: auto;
+  height: 40px;
   margin-left: auto;
 }
 
-.closeBtn:hover{
+.closeBtn:hover {
   color: #000;
 }
 
@@ -187,7 +182,7 @@ img {
 
   .box-container {
     display: flex;
-    flex:1;
-    flex-wrap:wrap;
+    flex: 1;
+    flex-wrap: wrap;
   }
 }

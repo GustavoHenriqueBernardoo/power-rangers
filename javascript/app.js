@@ -13,7 +13,7 @@ const API = 'JSON/power-rangers.json';
 getPowerRangers(API);
 
 // Fetching the JSON file
-async function getPowerRangers(url){
+async function getPowerRangers(url) {
   const response = await fetch(url);
   const data = await response.json();
   console.log(data);
@@ -34,11 +34,11 @@ panels.forEach(panel => {
 
 closeBtn.addEventListener('click', closeModal)
 
-function openModal(){
+function openModal() {
   modalContainer.classList.remove('hidden')
 }
 
-function closeModal(){
+function closeModal() {
   modalContainer.classList.add('hidden')
 }
 
@@ -46,27 +46,27 @@ function closeModal(){
 function handleClick(data) {
   const panels = document.querySelectorAll('.panel');
   panels.forEach((panel) => {
-    panel.addEventListener('click', ((event)=> {
+    panel.addEventListener('click', ((event) => {
       removeActiveClasses();
       panel.classList.add('active');
       console.log(event.currentTarget)
-      if(event.currentTarget.classList.contains("active")) {
-        showJson(data,event.currentTarget);
-      } 
+      if (event.currentTarget.classList.contains("active")) {
+        showJson(data, event.currentTarget);
+      }
     }))
   })
 }
 // Remove class active
-function removeActiveClasses(){
+function removeActiveClasses() {
   const panels = document.querySelectorAll('.panel');
-  panels.forEach((panel)=>{
+  panels.forEach((panel) => {
     panel.classList.remove('active');
     panel.style.pointerEvents = "auto";
   })
 }
 
 // Clear the html
-function clearRangers(){
+function clearRangers() {
   target.innerHTML = '';
   modalHeader.innerText = '';
   modalTitle.innerText = '';
@@ -74,13 +74,13 @@ function clearRangers(){
 }
 
 // Get the content from JSON to the HTML
-function showJson(data,target) {
+function showJson(data, target) {
   data.power_rangers.forEach((ranger) => {
-    const {name, images, power_level, role, abilities, limitations} = ranger;
-    if(ranger.name.includes(target.id)) {
+    const { name, images, power_level, role, abilities, limitations } = ranger;
+    if (ranger.name.includes(target.id)) {
       modalTitle.classList.add('each-ranger-title');
-      modalTitle.innerHTML = `<p>Name: ${name}</p>`  
-      modalHeader.appendChild(modalTitle) 
+      modalTitle.innerHTML = `<p>Name: ${name}</p>`
+      modalHeader.appendChild(modalTitle)
 
 
       modalBody.innerHTML = `
@@ -93,21 +93,20 @@ function showJson(data,target) {
         </div>
       `
       target.style.pointerEvents = "none";
-      target.style.height = "auto";
-      
+
       // setTimeout(clearRangers, 100)
-      
+
       // const redRanger = document.querySelector('pwrRed');
-    // target.style.pointerEvents = 'none';
-    // target.style.height = 'auto';
-    // eachRanger.style.display = 'flex';
-    // eachRanger.style.textAlign = 'center';
-    // eachRanger.style.flexDirection = 'column';
-    // eachRanger.style.padding = '10px';
-    // eachRanger.style.color = 'black';
-    // eachRanger.style.fontSize = '20px';
-    // eachRanger.style.background = 'url(https://kanto.legiaodosherois.com.br/w750-h750-k1/wp-content/uploads/2015/06/49e5fc5ddeec05e9017939a675186e6c.jpg.jpeg) no-repeat center'
-    // eachRanger.style.background.opacity = '15%';
+      // target.style.pointerEvents = 'none';
+      // target.style.height = 'auto';
+      // eachRanger.style.display = 'flex';
+      // eachRanger.style.textAlign = 'center';
+      // eachRanger.style.flexDirection = 'column';
+      // eachRanger.style.padding = '10px';
+      // eachRanger.style.color = 'black';
+      // eachRanger.style.fontSize = '20px';
+      // eachRanger.style.background = 'url(https://kanto.legiaodosherois.com.br/w750-h750-k1/wp-content/uploads/2015/06/49e5fc5ddeec05e9017939a675186e6c.jpg.jpeg) no-repeat center'
+      // eachRanger.style.background.opacity = '15%';
     }
   })
 }
